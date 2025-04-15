@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5f574f;
+}
+
+h1 {
+  color: #ff004d;
+  text-align: center;
+  font-family: 'FT-88 Expanded', Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+p {
+  color: #fff1e8;
+  font-family: 'FT-88 Regular', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+a {
+  color: #29adff;
+  font-family: 'FT-88 Italic', Arial, Helvetica, sans-serif;
+}
+
+.centered-box {
+  background: #000000;
+  padding: 2rem;
+  min-height: 600px;
+  min-width: 600px;
+  text-align: center;
+}
+
+.topbar {
+  background-color: #333;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topbar a:hover {
+  background-color: #ddd;
+  color: #000000;
+}
+
+.topbar a.active {
+  background-color: #ff004d;
+  color: #fff1e8;
+}
+
+@font-face {
+  font-family: 'FT-88 Regular';
+  src: url('../fonts/FT88-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Bold';
+  src: url('../fonts/FT88-Bold.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Serif';
+  src: url('../fonts/FT88-Serif.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Italic';
+  src: url('../fonts/FT88-Italic.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 School';
+  src: url('../fonts/FT88-School.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Expanded';
+  src: url('../fonts/FT88-Expanded.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Gothique';
+  src: url('../fonts/FT88-Gothique.woff2');
+}

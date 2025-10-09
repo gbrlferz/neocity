@@ -1,170 +1,95 @@
-/* ===== CORE SETTINGS ===== */
-:root {
-  /* Colors */
-  --primary: #352B42;
-  --secondary: #B45252;
-  --background: #212123;
-  --text: #F2F0E5;
-  --text-secondary: #B8B5B9;
-
-  /* Fonts */
-  --font-regular: 'Atkinson Hyperlegible Regular', sans-serif;
-  --font-bold: 'Atkinson Hyperlegible Bold', sans-serif;
-
-  /* Spacing */
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-}
-
-* {
-  font-family: var(--font-regular);
-  color: var(--text);
-  text-align: left;
-}
-
 body {
-  background: linear-gradient(0deg, var(--background) 60%, var(--primary) 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  align-items: center;
+  background: #5f574f;
 }
 
-/* ===== TYPOGRAPHY ===== */
 h1 {
-  font-family: var(--font-bold);
-  font-size: 2rem;
-  margin: 0;
-}
-
-h2 {
-  color: var(--text-secondary);
-  font-size: 1.5rem;
-  margin: 0;
+  color: #ff004d;
+  text-align: center;
+  font-family: 'FT-88 Expanded', Arial, Helvetica, sans-serif;
+  font-size: 40px;
 }
 
 p {
-  margin: var(--space-md) 0 0 var(--space-sm);
-  font-size: 1.1rem;
+  color: #fff1e8;
+  font-family: 'FT-88 Regular', Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
-/* ===== MAIN CARD ===== */
+a {
+  color: #29adff;
+  font-family: 'FT-88 Italic', Arial, Helvetica, sans-serif;
+}
+
 .centered-box {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  width: 80%;
+  background: #000000;
+  padding: 2rem;
+  min-height: 600px;
+  min-width: 600px;
+  text-align: center;
 }
 
-/* Profile Section */
-.profile-header {
-  display: flex;
-  gap: var(--space-md);
-  align-items: flex-start;
-  padding-right: 10rem;
+.topbar {
+  background-color: #333;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* ===== IMAGE STYLES ===== */
-.round-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-
-}
-
-.round-image:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 10px var(--background);
-}
-
-/* ===== CAROUSEL ===== */
-.carousel {
-  width: 100%;
-  padding: var(--space-md) 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  box-shadow: inset 0 0 10px var(--background);
-  background: var(--secondary);
-  border-radius: 10px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-x: contain;
-}
-
-.carousel-inner {
-  display: flex;
-  gap: var(--space-sm);
-  padding: 0 var(--space-md);
-  scroll-padding: var(--space-md);
-  scroll-snap-stop: always;
-
-  &::after {
-    content: '';
-    min-width: var(--space-md);
-    flex-shrink: 0;
-  }
-}
-
-.carousel-item {
-  min-width: 200px;
-  max-width: 200px;
-  aspect-ratio: 4/3;
-  scroll-snap-align: center;
-  position: relative;
+.topbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
+  font-size: 20px;
 }
 
-.poster-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px var(--background);
-  transition: all 0.3s ease;
-  background: var(--background);
+.topbar a:hover {
+  background-color: #ddd;
+  color: #000000;
 }
 
-.poster-image:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 10px var(--background);
-}
-
-/* ===== MOBILE VIEW ===== */
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
-  .centered-box {
-    padding: var(--space-md);
-  }
-
-  .profile-header {
-    flex-direction: column;
-  }
-
-  .round-image {
-    width: 150px;
-    height: 150px;
-  }
-
-  .carousel-item {
-    width: 180px;
-    min-width: 180px;
-  }
+.topbar a.active {
+  background-color: #ff004d;
+  color: #fff1e8;
 }
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible Regular';
-  src: url('../fonts/AtkinsonHyperlegibleNext-Regular.woff2');
+  font-family: 'FT-88 Regular';
+  src: url('../fonts/FT88-Regular.woff2');
 }
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible Bold';
-  src: url('../fonts/AtkinsonHyperlegibleNext-Bold.woff2');
+  font-family: 'FT-88 Bold';
+  src: url('../fonts/FT88-Bold.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Serif';
+  src: url('../fonts/FT88-Serif.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Italic';
+  src: url('../fonts/FT88-Italic.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 School';
+  src: url('../fonts/FT88-School.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Expanded';
+  src: url('../fonts/FT88-Expanded.woff2');
+}
+
+@font-face {
+  font-family: 'FT-88 Gothique';
+  src: url('../fonts/FT88-Gothique.woff2');
 }

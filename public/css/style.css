@@ -1,95 +1,108 @@
 body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #5f574f;
+	background-color: black;
+	color: #eee;
+	font-family: sans-serif;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
 }
 
 h1 {
-  color: #ff004d;
-  text-align: center;
-  font-family: 'FT-88 Expanded', Arial, Helvetica, sans-serif;
-  font-size: 40px;
+	color: #61dafb;
 }
 
-p {
-  color: #fff1e8;
-  font-family: 'FT-88 Regular', Arial, Helvetica, sans-serif;
-  font-size: 20px;
+.main-wrapper {
+	background-color: #222;
+	display: flex;
+	margin: auto;
+	overflow: hidden;
+
+	max-height: 90vh;
+	width: 100%;
+	max-width: 90vw;
+	min-height: 640px;
 }
 
-a {
-  color: #29adff;
-  font-family: 'FT-88 Italic', Arial, Helvetica, sans-serif;
+.sidebar {
+	width: 220px;
+	background-color: #333;
+	padding: 20px;
+	overflow-y: auto;
+	flex-shrink: 0;
 }
 
-.centered-box {
-  background: #000000;
-  padding: 2rem;
-  min-height: 600px;
-  min-width: 600px;
-  text-align: center;
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 30px
 }
 
-.topbar {
-  background-color: #333;
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.sidebar ul a {
+	display: block;
+	color: #eee;
+	padding: 10px 15px;
+	margin-top: 5px;
+	border-radius: 5px;
+	transition: background-color 0.2s ease-in-out;
+	text-decoration: none;
 }
 
-.topbar a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 20px;
+.sidebar ul a:hover {
+	background-color: #444;
 }
 
-.topbar a:hover {
-  background-color: #ddd;
-  color: #000000;
+.sidebar ul a.active {
+	background-color: #61dafb;
+	color: #222;
+	font-weight: bold;
 }
 
-.topbar a.active {
-  background-color: #ff004d;
-  color: #fff1e8;
+.sidebar ul.active:hover {
+	background-color: #61dafb;
+	color: #222;
 }
 
-@font-face {
-  font-family: 'FT-88 Regular';
-  src: url('../fonts/FT88-Regular.woff2');
+.content-area {
+	flex-grow: 1;
+	aspect-ratio: 4/3;
+	padding: 30px;
+	overflow-y: auto;
 }
 
-@font-face {
-  font-family: 'FT-88 Bold';
-  src: url('../fonts/FT88-Bold.woff2');
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
 }
 
-@font-face {
-  font-family: 'FT-88 Serif';
-  src: url('../fonts/FT88-Serif.woff2');
+.project-grid a {
+	color: inherit;
+	text-decoration: none;
 }
 
-@font-face {
-  font-family: 'FT-88 Italic';
-  src: url('../fonts/FT88-Italic.woff2');
+.project-card {
+	background-color: #333;
+	border: 1px solid #555;
+	padding: 15px;
+	border-radius: 8px;
 }
 
-@font-face {
-  font-family: 'FT-88 School';
-  src: url('../fonts/FT88-School.woff2');
+.project-card p {
+	font-size: 14px;
+	color: #bbb;
+	margin-top: 8px;
 }
 
-@font-face {
-  font-family: 'FT-88 Expanded';
-  src: url('../fonts/FT88-Expanded.woff2');
+.project-card:hover {
+	background-color: #444;
+	transform: translateY(-5px);
+	transition: all 0.2s ease-in-out;
 }
 
-@font-face {
-  font-family: 'FT-88 Gothique';
-  src: url('../fonts/FT88-Gothique.woff2');
+.project-card img {
+	width: 100%;
+	height: auto;
+	border-radius: 4px;
 }
